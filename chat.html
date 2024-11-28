@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox with Strikethrough</title>
+    <style>
+        /* Define the CSS class for strikethrough */
+        .strikethrough {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+
+    <label>
+        <input type="checkbox" id="myCheckbox">
+        <span id="checkboxLabel">Task to be completed</span>
+    </label>
+
+    <script>
+        // Get the checkbox and label elements
+        const checkbox = document.getElementById('myCheckbox');
+        const label = document.getElementById('checkboxLabel');
+
+        // Add event listener to the checkbox
+        checkbox.addEventListener('change', function() {
+            // Toggle the strikethrough class on the label when the checkbox is checked or unchecked
+            if (checkbox.checked) {
+                label.classList.add('strikethrough');
+            } else {
+                label.classList.remove('strikethrough');
+            }
+        });
+    </script>
+
+</body>
+</html>
